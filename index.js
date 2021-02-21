@@ -90,7 +90,7 @@ module.exports = {
         imports: 'always-multiline',
         exports: 'always-multiline',
         functions: 'always-multiline',
-        generics: 'always-multiline',
+        generics: 'never',
         tuples: 'always-multiline',
         enums: 'always-multiline'
       }
