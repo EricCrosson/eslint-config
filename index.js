@@ -105,6 +105,11 @@ module.exports = {
     '@typescript-eslint/prefer-namespace-keyword': 'warn',
 
     /**
+     * ava rules
+     */
+    'ava/use-test': 'off',
+
+    /**
      * fp-ts rules
      */
     'fp-ts/no-lib-imports': 'error',
