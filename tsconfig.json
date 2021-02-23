@@ -1,0 +1,21 @@
+{
+    "include": [
+        "test/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "lib": ["es6"],
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "esModuleInterop": true
+    },
+    "references": []
+}
