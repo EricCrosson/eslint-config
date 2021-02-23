@@ -1,6 +1,13 @@
 module.exports = {
   rules: {
     // TODO: flush out the remaining eslint rules
+    'quote-props': [
+      'error',
+      'as-needed',
+      {
+        numbers: true
+      }
+    ],
     /**
      * @typescript-eslint rules
      */
