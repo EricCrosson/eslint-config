@@ -200,6 +200,7 @@ module.exports = {
       'extensionPack',
       'extensionDependencies'
     ],
+    'json/ignore-files': ['**/package-lock.json', '**/dist/**'],
     // default setting minus tsconfig.json
     'json/json-with-comments-files': ['.vscode/**']
   }
