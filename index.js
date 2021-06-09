@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ['*.d.ts'],
+  ignorePatterns: ['*.d.ts', 'dist/*'],
   rules: {
     // TODO: flush out the remaining eslint rules
     'quote-props': [
