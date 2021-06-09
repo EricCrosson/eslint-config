@@ -1,6 +1,6 @@
 {
     "name": "@ericcrosson/eslint-config",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "Yet another eslint-config",
     "homepage": "https://github.com/ericcrosson/eslint-config",
     "bugs": {
