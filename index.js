@@ -126,16 +126,84 @@ module.exports = {
     'fp-ts/no-redundant-flow': 'error',
     'fp-ts/prefer-traverse': 'error',
     'fp-ts/prefer-chain': 'error',
-    'fp-ts/prefer-bimap': 'off'
+    'fp-ts/prefer-bimap': 'off',
+
+    /**
+     * import rules
+     *
+     * I would rather use the following configuration
+     * ```
+     *    "sort-imports": [
+     *      "error",
+     *      {
+     *        "memberSyntaxSortOrder": ["none", "single", "all", "multiple"],
+     *        "allowSeparatedGroups": true
+     *      }
+     *    ],
+     * ```
+     *
+     * Which separates the named imports from the namespace imports,
+     * but it does not currently support `--fix`. In accordance
+     * with the goals of this project, I will go with the
+     * below `alphabetize` config which inter-mingles the named and
+     * namespace imports and supports auto-fixing.
+     *
+     * ```
+     * 'import/order': [
+     *   'error',
+     *   {
+     *     alphabetize: {
+     *       order: 'asc',
+     *       caseInsensitive: false
+     *     }
+     *   ]
+     * ```
+     */
+    'no-multiple-empty-lines': ['error', { max: 1 }],
+
+    'import/no-unresolved': ['off'],
+    'import/export': ['error'],
+    'import/no-named-as-default': ['error'],
+    'import/no-named-as-default-member': ['error'],
+    'import/no-mutable-exports': ['error'],
+    'import/no-unused-modules': ['error'],
+    'import/first': ['error'],
+    'import/no-duplicates': ['error'],
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: false
+        },
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object'
+        ],
+        'newlines-between': 'always',
+        warnOnUnassignedImports: true
+      }
+    ],
+    'import/no-unassigned-import': ['error'],
+    'import/no-default-export': ['error'],
+    'import/group-exports': ['off'],
+    'import/dynamic-import-chunkname': ['off']
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:ava/recommended',
     'plugin:fp-ts/recommended',
+    'plugin:import/errors',
     'plugin:security/recommended'
   ],
-  plugins: ['@typescript-eslint', 'fp-ts', 'json-format', 'security'],
+  plugins: ['@typescript-eslint', 'fp-ts', 'import', 'json-format', 'security'],
   settings: {
+    'import/internal-regex': '^@stratos-trade/',
     // an extremely-verbose way to bring dependencies up in the default sort-order
     'json/sort-package-json': [
       'name',
