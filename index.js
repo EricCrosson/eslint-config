@@ -107,6 +107,7 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': ['off'],
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
+    '@typescript-eslint/no-unsafe-return': 'error',
 
     // Leaving this as a warn because I don't know what it does,
     // so I want to see what triggers it
