@@ -26,13 +26,6 @@ module.exports = {
       }
     ],
     '@typescript-eslint/strict-boolean-expressions': 'error',
-    '@typescript-eslint/prefer-nullish-coalescing': [
-      'error',
-      {
-        ignoreConditionalTests: false,
-        ignoreMixedLogicalExpressions: false
-      }
-    ],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -54,6 +47,16 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
+
+    // nullish coalescing
+    '@typescript-eslint/prefer-nullish-coalescing': [
+      'error',
+      {
+        ignoreConditionalTests: false,
+        ignoreMixedLogicalExpressions: false
+      }
+    ],
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
 
     // A+ Promise rules
     '@typescript-eslint/promise-function-async': 'error',
