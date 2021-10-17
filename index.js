@@ -49,6 +49,10 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': 'error',
     '@typescript-eslint/prefer-function-type': 'error',
 
+    // API definition
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'error',
+
     // import cycles
     'import/no-self-import': 'error',
     'import/no-cycle': 'error',
