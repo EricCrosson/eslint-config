@@ -54,7 +54,13 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
+
+    // A+ Promise rules
     '@typescript-eslint/promise-function-async': 'error',
+    'prefer-promise-reject-errors': 'error',
+    'no-promise-executor-return': 'error',
+    'require-atomic-updates': 'error',
+
     quotes: 'off',
     '@typescript-eslint/quotes': [
       'error',
