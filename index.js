@@ -47,6 +47,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
+    '@typescript-eslint/prefer-function-type': 'error',
 
     // import cycles
     'import/no-self-import': 'error',
