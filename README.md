@@ -1,5 +1,14 @@
 # eslint configuration
 
+[![License][]](https://opensource.org/licenses/ISC)
+![Build Status](https://github.com/ericcrosson/eslint-config/actions/workflows/ci.yml/badge.svg)
+[![NPM Package][]](https://npmjs.org/package/@ericcrosson/eslint-config)
+[![NPM Downloads][]](https://www.npmjs.com/package/@ericcrosson/eslint-config)
+
+[License]: https://img.shields.io/badge/License-ISC-blue.svg
+[NPM Package]: https://img.shields.io/npm/v/@ericcrosson/eslint-config.svg
+[NPM Downloads]: https://img.shields.io/npm/dt/@ericcrosson/eslint-config.svg
+
 The goal of this eslint config is to provide a linter focused on correctness of code and
 stylistic consistency, so long as the latter can be achieved without human intervention
 (with `eslint --fix`).
