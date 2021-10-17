@@ -1,8 +1,8 @@
 # eslint configuration
 
-The goal of this eslint config is to provide a linter focused on
-correctness of code and stylistic consistency, so long as the latter
-can be achieved without human intervention (with `eslint --fix`).
+The goal of this eslint config is to provide a linter focused on correctness of code and
+stylistic consistency, so long as the latter can be achieved without human intervention
+(with `eslint --fix`).
 
 ## Plugins
 
