@@ -6,6 +6,85 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['*.d.ts', 'dist/**', '**/node_modules/**'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:ava/recommended',
+    'plugin:fp-ts/recommended',
+    'plugin:import/errors',
+    'plugin:security/recommended'
+  ],
+  plugins: ['@typescript-eslint', 'fp-ts', 'import', 'json-format', 'security'],
+  settings: {
+    'import/internal-regex': '^@stratos-trade/',
+    // an extremely-verbose way to bring dependencies up in the default sort-order
+    'json/sort-package-json': [
+      'name',
+      'displayName',
+      'version',
+      'private',
+      'description',
+      'categories',
+      'keywords',
+      'homepage',
+      'bugs',
+      'repository',
+      'funding',
+      'license',
+      'author',
+      'maintainers',
+      'contributors',
+      'publisher',
+      'sideEffects',
+      'type',
+      'imports',
+      'exports',
+      'main',
+      'umd',
+      'jsdelivr',
+      'unpkg',
+      'module',
+      'source',
+      'jsnext',
+      'browser',
+      'types',
+      'typesVersions',
+      'typings',
+      'style',
+      'example',
+      'examplestyle',
+      'assets',
+      'bin',
+      'man',
+      'directories',
+      'engines',
+      'engineStrict',
+      'files',
+      'workspaces',
+      'binary',
+      'scripts',
+      'betterScripts',
+      'contributes',
+      'activationEvents',
+      'husky',
+      'pre',
+      'commitlint',
+      'lint',
+      'config',
+      'dependencies',
+      'devDependencies',
+      'dependenciesMeta',
+      'peerDependencies',
+      'peerDependenciesMeta',
+      'optionalDependencies',
+      'bundledDependencies',
+      'bundleDependencies',
+      'extensionPack',
+      'extensionDependencies'
+    ],
+    'json/ignore-files': ['**/package-lock.json', '**/dist/**'],
+    // default setting minus tsconfig.json
+    'json/json-with-comments-files': ['.vscode/**']
+  },
   rules: {
     // TODO: flush out the remaining eslint rules
     'quote-props': [
@@ -26,13 +105,6 @@ module.exports = {
       }
     ],
     '@typescript-eslint/strict-boolean-expressions': 'error',
-    '@typescript-eslint/prefer-nullish-coalescing': [
-      'error',
-      {
-        ignoreConditionalTests: false,
-        ignoreMixedLogicalExpressions: false
-      }
-    ],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -54,7 +126,32 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
+    '@typescript-eslint/prefer-function-type': 'error',
+
+    // API definition
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'error',
+
+    // import cycles
+    'import/no-self-import': 'error',
+    'import/no-cycle': 'error',
+
+    // nullish coalescing
+    '@typescript-eslint/prefer-nullish-coalescing': [
+      'error',
+      {
+        ignoreConditionalTests: false,
+        ignoreMixedLogicalExpressions: false
+      }
+    ],
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
+
+    // A+ Promise rules
     '@typescript-eslint/promise-function-async': 'error',
+    'prefer-promise-reject-errors': 'error',
+    'no-promise-executor-return': 'error',
+    'require-atomic-updates': 'error',
+
     quotes: 'off',
     '@typescript-eslint/quotes': [
       'error',
@@ -200,85 +297,9 @@ module.exports = {
     'import/no-unassigned-import': ['error'],
     'import/no-default-export': ['error'],
     'import/group-exports': ['off'],
-    'import/dynamic-import-chunkname': ['off']
-  },
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:ava/recommended',
-    'plugin:fp-ts/recommended',
-    'plugin:import/errors',
-    'plugin:security/recommended'
-  ],
-  plugins: ['@typescript-eslint', 'fp-ts', 'import', 'json-format', 'security'],
-  settings: {
-    'import/internal-regex': '^@stratos-trade/',
-    // an extremely-verbose way to bring dependencies up in the default sort-order
-    'json/sort-package-json': [
-      'name',
-      'displayName',
-      'version',
-      'private',
-      'description',
-      'categories',
-      'keywords',
-      'homepage',
-      'bugs',
-      'repository',
-      'funding',
-      'license',
-      'author',
-      'maintainers',
-      'contributors',
-      'publisher',
-      'sideEffects',
-      'type',
-      'imports',
-      'exports',
-      'main',
-      'umd',
-      'jsdelivr',
-      'unpkg',
-      'module',
-      'source',
-      'jsnext',
-      'browser',
-      'types',
-      'typesVersions',
-      'typings',
-      'style',
-      'example',
-      'examplestyle',
-      'assets',
-      'bin',
-      'man',
-      'directories',
-      'engines',
-      'engineStrict',
-      'files',
-      'workspaces',
-      'binary',
-      'scripts',
-      'betterScripts',
-      'contributes',
-      'activationEvents',
-      'husky',
-      'pre',
-      'commitlint',
-      'lint',
-      'config',
-      'dependencies',
-      'devDependencies',
-      'dependenciesMeta',
-      'peerDependencies',
-      'peerDependenciesMeta',
-      'optionalDependencies',
-      'bundledDependencies',
-      'bundleDependencies',
-      'extensionPack',
-      'extensionDependencies'
-    ],
-    'json/ignore-files': ['**/package-lock.json', '**/dist/**'],
-    // default setting minus tsconfig.json
-    'json/json-with-comments-files': ['.vscode/**']
+    'import/dynamic-import-chunkname': ['off'],
+
+    // security
+    'security/detect-unsafe-regex': 'error'
   }
 }
