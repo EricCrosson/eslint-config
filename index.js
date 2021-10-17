@@ -48,6 +48,10 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
 
+    // import cycles
+    'import/no-self-import': 'error',
+    'import/no-cycle': 'error',
+
     // nullish coalescing
     '@typescript-eslint/prefer-nullish-coalescing': [
       'error',
