@@ -297,6 +297,9 @@ module.exports = {
     'import/no-unassigned-import': ['error'],
     'import/no-default-export': ['error'],
     'import/group-exports': ['off'],
-    'import/dynamic-import-chunkname': ['off']
-  },
+    'import/dynamic-import-chunkname': ['off'],
+
+    // security
+    'security/detect-unsafe-regex': 'error'
+  }
 }
