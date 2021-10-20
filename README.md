@@ -4,10 +4,12 @@
 ![Build Status](https://github.com/ericcrosson/eslint-config/actions/workflows/ci.yml/badge.svg)
 [![NPM Package][]](https://npmjs.org/package/@ericcrosson/eslint-config)
 [![NPM Downloads][]](https://www.npmjs.com/package/@ericcrosson/eslint-config)
+[![semantic-release]](https://github.com/semantic-release/semantic-release)
 
 [License]: https://img.shields.io/badge/License-ISC-blue.svg
 [NPM Package]: https://img.shields.io/npm/v/@ericcrosson/eslint-config.svg
 [NPM Downloads]: https://img.shields.io/npm/dt/@ericcrosson/eslint-config.svg
+[semantic-release]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 
 The goal of this eslint config is to provide a linter focused on correctness of code and
 stylistic consistency, so long as the latter can be achieved without human intervention
