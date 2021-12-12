@@ -2,7 +2,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 6,
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['*.d.ts', 'dist/**', '**/node_modules/**'],
@@ -11,7 +11,7 @@ module.exports = {
     'plugin:ava/recommended',
     'plugin:fp-ts/recommended',
     'plugin:import/errors',
-    'plugin:security/recommended'
+    'plugin:security/recommended',
   ],
   plugins: ['@typescript-eslint', 'fp-ts', 'import', 'json-format', 'security'],
   settings: {
@@ -82,11 +82,11 @@ module.exports = {
       'bundledDependencies',
       'bundleDependencies',
       'extensionPack',
-      'extensionDependencies'
+      'extensionDependencies',
     ],
     'json/ignore-files': ['**/package-lock.json', '**/dist/**'],
     // default setting minus tsconfig.json
-    'json/json-with-comments-files': ['.vscode/**']
+    'json/json-with-comments-files': ['.vscode/**'],
   },
   rules: {
     // TODO: flush out the remaining eslint rules
@@ -94,8 +94,8 @@ module.exports = {
       'error',
       'as-needed',
       {
-        numbers: true
-      }
+        numbers: true,
+      },
     ],
     /**
      * @typescript-eslint rules
@@ -104,8 +104,8 @@ module.exports = {
     '@typescript-eslint/restrict-plus-operands': [
       'error',
       {
-        checkCompoundAssignments: true
-      }
+        checkCompoundAssignments: true,
+      },
     ],
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/member-delimiter-style': [
@@ -113,13 +113,13 @@ module.exports = {
       {
         multiline: {
           delimiter: 'none',
-          requireLast: false
+          requireLast: false,
         },
         singleline: {
           delimiter: 'semi',
-          requireLast: false
-        }
-      }
+          requireLast: false,
+        },
+      },
     ],
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-includes': 'error',
@@ -144,8 +144,8 @@ module.exports = {
       'error',
       {
         ignoreConditionalTests: false,
-        ignoreMixedLogicalExpressions: false
-      }
+        ignoreMixedLogicalExpressions: false,
+      },
     ],
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
 
@@ -160,8 +160,8 @@ module.exports = {
       'error',
       'single',
       {
-        avoidEscape: true
-      }
+        avoidEscape: true,
+      },
     ],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
@@ -178,16 +178,16 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '^_'
-      }
+        argsIgnorePattern: '^_',
+      },
     ],
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': ['error'],
     '@typescript-eslint/unbound-method': [
       'error',
       {
-        ignoreStatic: true
-      }
+        ignoreStatic: true,
+      },
     ],
     '@typescript-eslint/no-inferrable-types': ['error'],
     '@typescript-eslint/no-this-alias': ['error'],
@@ -206,8 +206,8 @@ module.exports = {
         functions: 'always-multiline',
         generics: 'never',
         tuples: 'always-multiline',
-        enums: 'always-multiline'
-      }
+        enums: 'always-multiline',
+      },
     ],
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': ['off'],
@@ -282,7 +282,7 @@ module.exports = {
       {
         alphabetize: {
           order: 'asc',
-          caseInsensitive: false
+          caseInsensitive: false,
         },
         groups: [
           'builtin',
@@ -291,11 +291,11 @@ module.exports = {
           'parent',
           'sibling',
           'index',
-          'object'
+          'object',
         ],
         'newlines-between': 'always',
-        warnOnUnassignedImports: true
-      }
+        warnOnUnassignedImports: true,
+      },
     ],
     'import/no-unassigned-import': ['error'],
     'import/no-default-export': ['error'],
@@ -303,6 +303,6 @@ module.exports = {
     'import/dynamic-import-chunkname': ['off'],
 
     // security
-    'security/detect-unsafe-regex': 'error'
-  }
+    'security/detect-unsafe-regex': 'error',
+  },
 }
