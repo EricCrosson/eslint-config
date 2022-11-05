@@ -1,6 +1,6 @@
 {
   "name": "@ericcrosson/eslint-config",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantic-release-managed",
   "description": "Yet another eslint-config",
   "homepage": "https://github.com/ericcrosson/eslint-config",
   "bugs": {
