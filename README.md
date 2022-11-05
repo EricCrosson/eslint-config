@@ -1,10 +1,8 @@
 # eslint-config
 
 [![Build Status]](https://github.com/EricCrosson/eslint-config/actions/workflows/release.yml)
-[![NPM Downloads][]](https://www.npmjs.com/package/@ericcrosson/eslint-config)
 
 [build status]: https://github.com/EricCrosson/eslint-config/actions/workflows/release.yml/badge.svg?event=push
-[npm downloads]: https://img.shields.io/npm/dt/@ericcrosson/eslint-config.svg
 
 The goal of this eslint config is to provide a linter focused on correctness of code and
 stylistic consistency, so long as the latter can be achieved without human intervention
