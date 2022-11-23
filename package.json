@@ -17,8 +17,6 @@
     "index.js"
   ],
   "scripts": {
-    "format": "prettier --list-different package.json index.js README.md",
-    "format:fix": "prettier --write package.json index.js README.md",
     "test": "node --test test.js"
   },
   "peerDependencies": {
@@ -31,7 +29,6 @@
     "eslint-plugin-security": "^1.4.0"
   },
   "devDependencies": {
-    "prettier": "2.8.0",
     "semantic-release": "19.0.5"
   },
   "keywords": [
