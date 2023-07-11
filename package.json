@@ -20,7 +20,7 @@
     "test": "node --test test.js"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0 || ^6.0.0",
     "eslint": ">= 6.6.0",
     "eslint-plugin-ava": ">= 10.2.0",
     "eslint-plugin-fp-ts": ">= 0.3.0",
